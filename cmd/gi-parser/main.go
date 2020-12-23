@@ -10,15 +10,15 @@ import (
 	demoinfocs "github.com/markus-wa/demoinfocs-golang/v2/pkg/demoinfocs"
 	msgpack "gopkg.in/vmihailenco/msgpack.v2"
 
-	min "github.com/markus-wa/cs-demo-minifier"
-	pb "github.com/markus-wa/cs-demo-minifier/protobuf"
-	rep "github.com/markus-wa/cs-demo-minifier/replay"
+	min "github.com/lskov/cs-demo-minifier"
+	pb "github.com/lskov/cs-demo-minifier/protobuf"
+	rep "github.com/lskov/cs-demo-minifier/replay"
 )
 
 func main() {
 	fl := new(flag.FlagSet)
 	fl.Usage = func() {
-		fmt.Fprintln(os.Stderr, "Usage of csminify:")
+		fmt.Fprintln(os.Stderr, "Usage of csminify (Game Insight Version):")
 		fl.PrintDefaults()
 		fmt.Fprintln(os.Stderr)
 		fmt.Fprintln(os.Stderr, "May exit with code 3 if a demo ends unexpectedly, but the minified data may still be usable if this happens")
